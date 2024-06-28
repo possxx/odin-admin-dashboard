@@ -60,15 +60,59 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .page.dashboard {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 .sidebar {
-    border: 1px solid var(--sky-950);
     height: 100dvh;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     grid-row: 1 / 3;
-    padding: 20px;
+    padding: 1em;
+    background-color: var(--sky-500);
+}
+
+.sidebar svg {
+    min-width: 1.5em;
+    max-width: 1.5em;
+    fill: var(--sky-50);
+    justify-self: center;
+}
+
+.sidebar p {
+    color: var(--sky-50);
+    font-family: "roboto";
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.sidebar-dashboard,
+.sidebar-navigation,
+.sidebar-help {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    row-gap: 0.9em;
+}
+
+.sidebar-dashboard svg {
+    min-width: 3em;
+    max-width: 3em;
+}
+
+.sidebar-dashboard p {
+    font-size: 1.5em;
+}
+
+.sidebar svg:has(+ p:hover) {
+    fill: var(--sky-950);
+}
+
+.sidebar p:hover {
+    color: var(--sky-950);
 }
 
 .header {

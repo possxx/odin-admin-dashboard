@@ -61,12 +61,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .page.dashboard {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: minmax(200px, 1fr) 4fr;
 }
 
 .sidebar {
     height: 100dvh;
-    min-width: 250px;
+    min-width: 175px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -117,8 +117,25 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .header {
     border: 1px solid var(--sky-950);
-    padding: 20px;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
 
+.search {
+    border: 1px solid var(--sky-950);
+}
+
+.user {
+    border: 1px solid var(--sky-950);
+}
+
+.user-info {
+    border: 1px solid var(--sky-950);
+}
+
+.buttons {
+    border: 1px solid var(--sky-950);
 }
 
 .main-content {

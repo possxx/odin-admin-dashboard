@@ -24,6 +24,12 @@
 
 @import "./modules/node_modules/modern-normalize/modern-normalize.css";
 
+*,
+*::before,
+*::after {
+    margin: 0;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -50,4 +56,28 @@ p, h1, h2, h3, h4, h5, h6 {
     --sky-800: #075985;
     --sky-900: #0c4a6e;
     --sky-950: #082f49;
+}
+
+.page.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.sidebar {
+    border: 1px solid var(--sky-950);
+    height: 100dvh;
+    grid-row: 1 / 3;
+    padding: 20px;
+}
+
+.header {
+    border: 1px solid var(--sky-950);
+    padding: 20px;
+
+}
+
+.main-content {
+    border: 1px solid var(--sky-950);
+    padding: 20px;
 }

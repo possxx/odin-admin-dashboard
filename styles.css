@@ -258,8 +258,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .projects {
-    border: 1px solid var(--sky-950);
-    grid-row: 1 / 3;
+    margin-bottom: 2em;
 }
 
 .projects-content {
@@ -272,21 +271,40 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .project-card {
-    border: 1px solid var(--sky-950);
     padding: 2em 1.5em;
     background-color: var(--sky-50);
     border-radius: 12px;
+    border-left: 6px inset var(--sky-950);
     font-family: "roboto", system-ui, Arial, Helvetica, sans-serif;
     color: var(--sky-950);
     box-shadow: 5px 5px 10px -10px var(--sky-950);
+    display: grid;
+}
+
+.project-text {
+    cursor: pointer;
+}
+
+.project-icons svg {
+    cursor: pointer;
 }
 
 .project-text p + p {
     font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.project-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1.5em);
+    fill: var(--sky-950);
+    justify-content: end;
+    align-items: center;
+    column-gap: 1.5em;
+    justify-self: end;
 }
 
 .announcements {
-    border: 1px solid var(--sky-950);
     padding: 0 1em;
     max-width: 400px;
 }
@@ -321,7 +339,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .trending {
-    border: 1px solid var(--sky-950);
     padding: 0 1em;
 }
 
